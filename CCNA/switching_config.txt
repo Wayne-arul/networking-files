@@ -1,0 +1,24 @@
+Switch 1
+
+Switch(config)# interface fastEthernet 0/2
+Switch(config-if)# switchport mode access
+Switch(config-if)# exit
+Switch(config)# interface fastEthernet 0/3
+Switch(config-if)# switchport mode access
+Switch(config-if)# exit
+Switch(config)# interface fastEthernet 0/24
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# exit
+
+
+Switch 2
+
+Switch(config)# interface fastEthernet 0/1 
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# exit
+Switch(config)# interface fastEthernet 0/2
+Switch(config-if)# switchport mode access
+Switch(config-if)# exit
+Switch(config)# interface fastEthernet 0/3 
+Switch(config-if)# switchport mode access
+Switch(config-if)# exit

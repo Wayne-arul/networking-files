@@ -1,0 +1,748 @@
+TOPOLOGIES
+
+1)Star Topology
+2)Bus Topology
+3)Ring Topology
+4)Mesh Topology
+5)Hybrid Topology
+6)Client Server Topology
+7)Point to Multipoint 
+8)Peer to Peer
+
+FIREWALL
+
+Firewall can either be software or Hardware.It is a system designed to prevent unauthorized access from entering a private Network.It will filter information comes from the internet , it blocks unwanted traffics and permit wanted traffic.
+In today's buissness , Firewall is Mandatory to keep the network safe.
+Firewall controls the flow of traffic coming in and out ,through its Access Control List(ACL).
+ACL is a list of rules of what can access the network.It either allows or deny the permission.
+Most Firewall will come out with a rule called Implicit Deny ,
+which it will only allow port 80 , and it will deny every other ports which we have to allow manually.
+
+Host-Based FIREWALL
+
+This is a software Firewall.
+Which will keep only the Computer safe.
+Example : Now-a-days Microsoft Softwares are coming with inbuilt Firewalls which will keep computers safe.
+
+Network-Based FIREWALL
+
+This is a combination of Software & Hardware Firewall.
+This Firewall is connected to Router which is connected to computer. 
+This will protect an entire Network.
+
+Firewall inspect traffic in a couple of different ways.
+1)Stateful Firewall
+2)Stateless Firewall
+
+Stateful Firewall
+
+This will moniter every connections and data streams that are passing through the firewall.
+This will always keeps a record.
+Does a thorough job of protecting a network.
+
+Stateless Firewall
+
+Does not do a thorough job.
+Uses an ACL to allow or deny traffic
+Does not keep a record.
+
+Content Filtering
+
+This technology is commonly used in email.
+This filters data based on their content.
+Commomly used to filter spam emails.
+
+Signature Identfication
+
+It is used to detect viruses with well known behaviour patterns.
+Firewalls use signature identification to spot these behaviours and will take action immediately.
+
+IDS/IPS
+
+Intrusion detection or Prevention system is a hardware tool which will prevent a network from outside the Firewall
+Will prevent from viruses , Malware , Hackers.
+
+DOCSIS MODEM
+
+It handles both incoming and outgoing data signals.
+it supports 10GB downstream and 1GB upstream.
+
+HUB
+
+Hub is a device that has multiple ports , which accepts Ethernet connections from Network devices.When data packet is arrived at one port , data will be copied to all other ports.Hub is not intelligent , so it will not filter data.
+Passive Hub does not require power,where as Active Hub requires power.
+
+SWITCH
+
+Switch is same as Hub which has mutiple ports that accepts Ethernet connections from network.But Switch is intelligent.Switch can learn addresses of the devices connected to it and stores them in table.When data packet is sent to the port , it will directly reach the intended port(specific port).
+Multilayer switch can operate layer 2 and 3 of the OSI model.
+Content switch can operate at layer 4 through layer 7 of the OSI model.
+
+STP(Spanning Tree Protocol) - Multiple Switches are connected with computers , because even one Switch fails ,other Switches can manage to transfer connections.
+
+BRIDGES
+
+For Example:
+Two Hubs are seperately connected to multiple computers individually.Both Hubs connected are connected at a point.
+This will results in traffic.To prevent that , BRIDGES come into action , where Bridge is connected in-between both the Hubs.
+It will filter data packets and prevent traffic.
+ 
+ROUTER
+
+It will forward or route the data packets based on their ip addresses.But it will allow us to send data to other computers through Router.
+
+GATEWAY
+
+A device that joins two networks together.
+This does not change the data but , it will change the format of the data which completely becomes different network.
+
+CSU/DSU
+(Channel Service Unit/Data Service Unit):
+this will converts Data from LAN(LocalAreaNetwork) to WAN(WideAreaNetwork).
+
+WAPs (WirelessAccessPoint)
+
+It is a Wireless Hub , that is used by wireless devices.This will transfer data between Wireless and Wired Devices for communication.
+
+Infrared
+
+The data is transmitted in rays of light.
+Disadvantage is that it requires direct line of sight.If any object comes in-between two infrared devices , data transfer will be stopped.And it cannot be used in direct sunlight.
+ 
+
+Bluetooth
+
+It operates at 2.4Ghz.
+It is used to transfer data between Phones , Tablets , Laptops etc.It is capable to transmitting both voice and data.Can send data upto 100metres.
+
+
+MAC ADDRESS
+
+Physical address is the MAC address. 
+MAC means Media Access Control. 
+It is a 48bit hexadecimal address
+Each and every device has a unique address.
+MAC address is a six byte hexadecimal number that is burned into every NIC by its manufacturer. NIC - Network Interface Card
+It contains numbers and alphabets from A-F only.
+
+00-04-5A-63-A1-66
+First 3 bytes defines the manufacturer of the NIC.(Eg.Linksys,Netgear,Belkin).
+Last 3 bytes defines each device.
+
+OSI MODEL(Open Systems Interconnect)
+
+7)Application
+6)Presentation
+5)Session
+4)Transport
+3)Network
+2)Data Link
+1)Physical
+
+Application Layer -
+
+Manages communication between applications ,people can read data in this layer.It will gather some information and send it to the next layer.
+
+Presentation Layer -
+
+ Data is Translated and then data compression and then data encryption will happen.
+
+Session Layer 
+
+It creates a session between applications and computer.
+Manages and terminates connection between local and remote applications.
+Otherwise known as Traffic Cop , because it controls network traffic
+
+Transport Layer 
+
+Provide data transfer between end users.
+Responsible for resending packets that do not receive any acknowledgement from destination.(TCP)
+This layer guarantee that data packets are received.
+
+Network Layer
+
+It will guide/route the data packets (based on its ip address) to reach its destination.Eg.Router
+
+Data Link Layer
+
+It is responsible for sending data to the Physical Layer.
+Data packets are encoded and decoded into bits.
+Handles flow control and frame synchronization.
+
+Physical Layer 
+
+This layer defines the physical characteristics of a network.
+Defines topology of a network
+
+IP ADDRESS (INTERNET PROTOCOL)
+
+Its a numeric address.
+Every device has a ip address while its connected to a network.
+Consists of two parts which is Network ip and a Host ip.
+IP address is of two types , which includes IPv4 and IPv6
+
+IPv4 is a 32-bit numeric address. 
+Example - 192.168.54.1
+IPv6 is a 128-bit hexadecimal address which uses both numbers and alphabets.
+Example - 76DC:4F59:34CF:71CD:9DC6:89CD:45D6:67A2
+
+Subnet Mask
+
+With Subnet mask we can find out which portion belongs to Network address and which portion belongs to host address.
+
+IP - 173.16.0.0
+Subnet mask - 255.255.0.0
+The First two octets are the network portion,because in this subnet mask other two octets are zeros.
+
+Private IP
+
+It is not publicly registered.
+And it cannot access internet directly.
+We can connect a bulk of computers to Network and use as one public ip address.
+
+Subnetting
+
+Where all the computers are connected to a Router which is connected to a Network.This will work for small companies but not for large scale companies as there were excessive traffic.
+Subnetting is done by changing the default subnet mask by borrowing some bits from host portion.
+            n
+formula =  2 -2 
+After subnetting your Subnet mask will be like this = 255.255.224.0
+
+Dynamic IP addressing
+
+Dynamic ip is an ip given to  the computer by DHCP server.
+When we send request to the DHCP server it will automatically give us a dynamic ip , subnetmask , gateway and DNS server.
+Dynamic ip address changes automatically for every 8hrs.
+
+Static IP addressing
+
+Static ip is an ip given to the computer manually which is permanent beacuse whereas Dynamic ip changes automatically. 
+
+Self-assigned IP
+(APIPA - Automatic Private IP Address assignment)
+
+When we send request to DHCP server , if our computer failed to reach DHCP server or else if the DHCP server is down , then computer will self-assign an ip for the computer which is called as APIPA.
+
+SCOPE (DHCP)
+
+Scope is a group and a consecutive range of ip addresses for computers that gets their ip from DHCP server.
+            
+RESERVATION (DHCP)
+
+When we select a ip address in address reservation , whenever we send request to DHCP server , it will recognize the ip address which we selected in address reservation and set it as our ip which will not change.
+
+LEASE (DHCP)
+
+The DHCP server assign the ip address as a lease.
+A lease is the amount of time that the ip address will last.
+
+DHCP RELAY
+
+If the ip settings of our computer is different as compared to DHCP server's ip settings then DHCP server will not receive request from our computer.If DHCP relay enabled , then DHCP server will receive request which is sent through Router and then DHCP server will send back an ip address to the computer.
+
+TCP (Transmission Control Protocol)
+
+It is used in TCP/IP protocol.
+It is a connection oriented protocol which means it will be the first one to acknowledge a session between two computers that communicate.
+It does this by a three way handshake.
+First Sender will send an ackowledgement message called SYN to the receiver .
+Next the Receiver will send an acknowledgement message called SYN ACK to the Sender. 
+And again Sender will send an acknowledgement message called ACK RECEIVED to the Receiver.
+TCP ensures that the data is received.If the data didn't received , then it will resend the data again. 
+
+UDP (User Datagram Protocol)
+
+It is a connectionless oriented protocol which means it will not ensure that the data is received or not.
+So only UDP is faster than TCP.
+
+FTP (File Transfer Protocol)
+
+We can download or upload files through internet.
+When we download a file , it will come from FTP server to the computer.FTP is responsible for file transfer in internet.
+FTP is a connection protocol which uses TCP for file transfer , so it will ensure that the file is received.
+
+TFTP (Trivial File Transfer Protocol)
+It is responsible for the file transfer that happens within a Network. It is a connectionless protocol which uses UDP for file transfer.
+
+SFTP (Secure File Transfer Protocol)
+It is same as FTP. But it adds a layer of security which data is encrypted using secure shell during file transfer.
+
+SMTP (Simple Mail Transfer Protocol)
+It is responsible for sending and receiving mails.
+This uses TCP protocol which ensure that data is received.
+For Example : When you send a mail to someone ,if they didn't receive it , then you will receive an error that 'mail did't sent'.
+
+POP3 (Post Office Protocol version3)
+It is responsible for retrieving mail from the mail server.
+We can download the mail to our computer.This does not do any syncing.
+Mail server will not keep any copy unless you mention.
+
+IMAP4 (Internet Message Access Protocol ver.4)
+It is responsible for retrieving mails from mail server.
+This keeps copies of the email.
+In IMAP4 , we can directly get copies from Mail server to our computer in our home.
+And this syncs email and folders between Mail server and our computer.
+
+HTTP (HyperText Transfer Protocol)
+It is responsible for viewing webpages.
+One of the most widely used protocol.
+Example : http://www.cnn.com
+This means , we are using http protocol for viewing this webpage.
+It is not secure.
+
+HTTPS (HyperText Transfer Protocol Secure)
+It is responsible for viewing webpages as same as HTTP , but in HTTP data will not be encrypted or secured.
+In HTTPS , the data will be sent and received in a secured manner.
+For Example:
+Banks , Mail and E-Commerce sites use HTTPS ,because we enter our confidential data such as credit card details , password etc.So in HTTPS our confidential data will be encrypted and secured.
+
+TELNET(Teletype Network)Protocol
+It is a terminal emulation program where we can send commands from our computer to remote servers.It is used to test connectivity on specific ports.
+It can access devices within a local network and not internet.
+The disadvantage of TELNET is that , all commands are sent in clear text which is not secure.
+
+SSH (Secure Shell)Protocol
+It is an best alternative for TELNET , because SSH protects our confidential data such as login , password from hackers.
+For Example :
+During data transfer from computer to server , SSH will form a tunnel around the connection , so that hackers cannot listen or access the data.
+
+ARP (Address Resolution Protocol)
+It resolves IP address to MAC address.
+Whenever computers try to communicate between each other , they must need the MAC addresses of the target computer.
+For Example :
+If a computer try to communicate with another computer , it will first look at the ARP Cache of the target computer , to find its MAC address(Target).
+If the computer have matching MAC for its ip , then they can easily communicate .
+If it does not have the matching MAC address , then it will send a broadcast message to the target , asking for its MAC address by sending target's ip.
+If the target computer have that ip address , then it will send MAC address to the other computer.Then communication will happen.
+
+RARP (Reverse Address Resolution Protocol)
+
+RARP is just the opposite of ARP.
+It resolve MAC address to IP address.
+
+NTP (Network time Protocol)
+
+It is used to synchronize the clocks of computer with the 'U.S Naval Observatory master clock'.
+This runs on every computer.
+It send periodic request to the server to check whether the time is in sync.
+
+SCP (Secure Copy Protocol)
+
+It is a file transfer protocol.
+This uses secure shell to secure data while data transfer in a network. 
+
+SNMP (Simple Network Management Protocol)
+
+It is used for Network management.
+This collects data from routers , printers and servers.
+
+PORTS 
+Computer receives data from internet, through ports.
+Ports are categorized by 2 protocols called as TCP & UDP.
+Port is a logical connection used by softwares or programs to exchange information.
+Every port has its unique number.
+Port number ranges from 0-65535.
+
+DNS (Domain Name System)
+It transform Domain names to ip address.
+When we search a website in internet , we just enter the domain name.At that time DNS will search for the domain name in DNS Database , and then it will transform the Domain name to ip address.
+
+WINS (Windows Internet Name Service)
+It transforms NETBIOS name to IP adddress.
+When we try to communicate with target computer , WINS will search the target computer name in WINS database .
+And then it will transform Netbios name to ip address.
+
+NAT (Network Address Translation)
+
+Translates ip addresses from one kind to another.
+It translate public ip to private ip and private ip to public ip.
+
+PAT (Port Address Translation) - Translates port address to ip address.
+
+SNAT (Static Network Address Translation)
+When computer wants to communicate any server outside the network , then SNAT will link a public ip addresses with the computer's private ip addresses permanently.
+
+PROXY service
+
+It is used to retrieve web pages.
+It will retieve web pages and store them in a Cached Webpage database on Proxy server.
+
+RDP (Remote Desktop Protocol)
+
+It is a technology from microsoft , where we can access target computer's display by enter entering ip and other credentials of the target computer.
+
+BROADCAST 
+
+A single transmitter send signal to multiple receivers.
+For Example : 
+A Wireless Router can Broadcast its signals which can be received by multiple computers to access internet.
+
+UNICAST - Data sent to a single destination
+MULTICAST - Data packets are sent to mutiple destination at same time.
+
+ROUTING PROTOCOLS
+
+LOOPBACK Interface
+
+It is a fake or virtual interface that is created on a router , which we used it for testing and administration purposes.
+We can assign an ip address to it.
+
+Routing Table 
+
+It is a file contains a list of rules that will tell us the best path for the data packet to reach its destination.
+A Routing table has Network destination which is the ip address of final destination, a subnet mask which will identify the network portion and host portion , and a gateway that tells the router about the transfer of data packet to the ip address.
+
+Routing Protocols - This will find the best way for the data packets to travel.
+
+RIP (Routing Information Protocol)
+
+Routers which use RIP , will broadcast their routing information to other routers every 30 seconds.
+It causes unecessary traffic , so the developers created RIPv2 to solve these problems.
+
+BGP (Border Gateway Protocol)
+
+It is a distance vector protocol.
+It determines routing directions based on their paths and policies.
+
+LinkState Protocol
+
+It is a routing protocol used by routers to share their information and idependently find the best path on a network.
+
+OSPF (Open Shortest Path First)
+
+It is a routing protocol which is used to choose the correct route for the data packets to travel and reach its final destination.
+
+SIP (Session Initiation Protocol)
+
+Used to establish communication sessions over internet.
+Example :
+Voip(Voice over Internet Protocol) - term that is used for voice communications over ip.
+It is also used for messaging and conferencing services.
+
+RTP (Real-time Transport Protocol)
+
+It is used for transporting real-time data such as streaming video and audio.It uses UDP which doesn't ensure data delivery.
+Can able to send data in both unicast and multicast.
+
+WAN TECHNOLOGY
+
+Packet Switching
+
+In this method the data packets are splitted separately and each will go through different routers and finally reach its destination and then reassembled as a single data.
+
+Circuit Switching
+
+It is same as Packet Switching but the data packets will be traveled in the same route. 
+
+ISDN (Integrated Services Digital Network)
+
+It is a telephone network system that transmits both data and voice over a digital line.
+Standard modem will have 56Kbps max speed , whereas ISDN modem will provide 128Kbps max speed.
+
+Metro Ethernet 
+
+It is used to connect buissness companies and residential users to a larger network.Example : Internet using Ethernet.
+Metro Ethernet is simple and cheap and it does not require any special cable or devices.It just uses normal ethernet cables.
+
+NETWORK TYPES
+
+PAN (Personal Area Network)
+
+It is used to transfer data such as music , pdf between mobile phones , tablets etc.Example : Bluetooth.
+
+LAN (Local Area Network)
+
+2 or more computers connected to each other in same building.
+Most common LAN is Ethernet LAN , where all computers in same building are connected to each other with Switch.
+
+MAN (Metropolitan Area Network)
+
+MAN is larger Network than PAN.
+It is connected to serveral buildings in a city using fiber optic cables.
+
+WAN (Wide Area Network)
+
+WAN is larger than MAN.
+WAN covers a larger geographic area such as a Country , Continent or Globe. Example : Internet.
+
+GSM (Global System for Mobiles)
+
+It works by converting voice into a digital form.
+It is the largest radio system used around the world.
+
+CDMA (Code Division Multiple Access)
+
+It is not used that much around the world as compared to GSM.
+It works by encoding the data with a unique key.
+
+4G LTE(4th Gen Long Term Evolution)
+It is developed by 3rd Generation Partnership Project.
+Speeds of over 100mbps.
+
+3G (3rd Generation)
+Speeds 384Kbps-2Mbps
+
+EDGE (Enhanced Data rates for GSM Evolution)
+Very slow.
+Speeds starting from 75Kbps.
+
+REMOTE ACCESS PROTOCOLS & SERVICES
+
+RAS (Remote Access Service)
+
+This service will helps you to connect to a computer from a remote location.
+It was developed by Microsoft.
+It works with major network protocols such as TCP/IP ,Netbeui and IPX/SPX.
+
+PPP (Point to Point Protocol)
+
+It is a remote access protocol.
+It supports encryption.
+It is a secure protocol.
+
+PPTP (Point to Point Tunneling Protocol)
+
+It is used for creating VPNs.
+Data transfer between two computers are secured by creating a tunnel. 
+
+GRE (Generic Route Encapsulation)
+
+It is used with PPTP to create a VPN.
+It creates a tunnel in PPTP.
+This encapsulates the data in a secure manner.
+
+VPN (Virtual Private Network)
+
+It is a private network that uses a public network(Internet) to establish a remote connection.
+It encrypts our data when sending and decrypts our data while receiving.
+
+VPN Concentrator
+
+It is a device that creates a VPN connection and it manages the delivery of messages between computers.
+It authenticate the users.
+It encrypts the data.
+It assigns tunnel ip address to users.
+
+AUTHENTICATION PROTOCOLS
+
+PAP (Password Authentication Protocol)
+Process where users login and pass will be sent to servers.
+It is not secure as the data were sent in clear text.
+
+CHAP (Challenge Handshake Authetication Protocol)
+
+It encrypts usernames and passwords.
+It can be done by three way handshake.
+At first ,connection is made , then the server will send a response to hash the password.Then user will hash the password and send it to the server.
+Example:
+Actual pass - ROOT
+Hash pass - #R@O%O&T
+
+MSCHAP(Microsoft CHAP)
+
+MSCHAP - Its a basic CHAP
+MSCHAP 2 - It provides mutual authentication between user and server.
+
+RADIUS (Remote Authentication Dail-in-Service) - It will store users log and access them in-behalf of the user.
+
+KERBEROS (Authentication)
+It is a network authentication protocol.
+It authenticates client by using tickets.
+Client will send login pass details to Kerberos server , then Kerberos will send a ticket to the client.
+Client uses the ticket to access Network resources.
+
+EAP (Extensible Authetication Protocol)
+
+It is an extension to PPP,
+It is used in Smart Cards.
+
+NETWORKING TOOLS
+
+
+Protocol Analyzer
+
+It is also known as packet sniffer.
+It is a software or hardware used to troubleshoot and analyze the traffic on network.Traffic means Logs , Data packets ,Broadcasts etc.
+It can detect intrusion attempts , networkings problems etc.
+Example : Wireshark 
+
+CLOUD & VIRTUALIZATION
+
+VIRTUALIZATION
+
+In old days companies use separate servers for buissness operations.They have Web server to run their websites , they have database server where their data will be stored and they have separate email server.But this cost a lot and very expensive. So there it comes the virtualization.
+In virtualization only one server machine will be there. That single server machine runs web server , email server , database server in an virtual environment.That machine can run multiple OS virtually. This saves money.
+
+
+CLOUD COMPUTING
+
+It will store and run our data and applications in a remote server called cloud server rather than being on our computer.
+
+IAAS (Infrastructure as a Service)
+
+If we run a company , and we let a 3rd party to handle our servers , storage , virtualization and networking .So this is IAAS .
+Example : Amazon Web Services(AWS).
+
+PAAS (Platform as a Service)
+
+This is same as IAAS , but in PAAS , we only have the access to applications and data whereas 3rd party have our OS , Middleware , Runtime , Storage , Virtualization , Servers , Networking.
+Example : Microsoft Azure
+
+SAAS (Software as a Service)
+
+This same as IAAS and PAAS but , SAAS will have the complete access to our OS , Middleware , Runtime , Applications , Data , Storage , Virtualization , Servers , Networking.We have no access to anything.
+We can access these by connecting to the Cloud server.
+
+NAS (Network Attached Storage)
+
+It is a storage device used for storing data on a network.
+This devices has multiple hard drives.
+It is directly connected to a Switch or Router on a Network.
+We can access the files from Network through a Shared folder.
+
+SAN (Storage Area Network)
+
+It is high speed Network that stores large amount of data.
+It can be connected to Switches and servers.
+We can access these from our computer.
+
+VLAN , INTRANET & EXTRANET
+
+VLAN (Virtual Local Area Network)
+
+In a company , when there is a lot of computers , the data transfer happening will results in traffic.
+At that time VLAN Switch is used , to avoid traffic.
+It creates several virtual networks to avoid 'broadcast traffic'.
+
+INTRANET
+
+It is a private Network  that belongs to the company.
+The company has its own Intranet server where the data , such as company sales , staff details etc. will be stored on the Intranet Web server of the company.It cannot be accesed from outside.And it has inbuilt Firewall.
+
+EXTRANET
+
+It is same as Intranet , as we can access the private Network from outside on a resticted basis.
+
+OPTIMIZATION & FAULT TOLERANCE
+
+LOAD BALANCER - It is used to balance network activity between servers.
+
+QoS (Quality of Service)
+
+In networking , this term is used to provide a gurantee of data delivery in a short period of time.
+
+SECURITY PROTOCOLS
+
+IPSec (Internet Protocol Security)
+
+This encrypts data during data transfer.
+It requires two keys to unlock the data.
+Sender will lock the data and send it to the receiver and then receiver have to use his key to decrypt.
+This prevents data tampering.
+It is of two modes.
+Transport mode - Only the message portion is encrypted.
+Tunnel mode - Entire data packet is encrypted.
+
+
+L2TP (Layer 2 Tunneling Protocol)
+
+It combines with cisco layer 2 forwarding and PPTP which means it provides a tunnel for data transfer.
+This authenticates both computer and the user.
+This will prevent data tampering , otherwise called as 'Man-in-the-middle' attack.
+
+SSL (Secure Sockets Layer)
+
+This provides security on internet.
+For Example : When we search http://www.google.com in browser , the http is automatically changed to https .This is because of SSL protocol.It authenticates server , client and encrypts the data.
+
+TLS (Transport Layer Security)
+
+It is same as SSL.
+It authenticates the client , server and encrypts the data.
+But it is made up of two layers.
+TLS Record Protocol which make sure that the connection is private.
+TLS Handshake Protocol which allows server and client to authenticate and negotiate about the cryptographic keys before data is sent.
+
+802.1x
+
+Used in both wired and wireless networks.
+Controls network access by ports.
+If the authentication is pass then port will open , if fail then port will be closed.
+
+SOHO ROUTERS
+
+(Small Office/Home Office) Router - It is used in homes and small business companies.
+
+CONFIGURATION :
+
+We have to enter the Router's built in web page to configure the router.We have to enter Router's ip in the web address during configuration.
+
+SSID (Service Set Identifier) - It is the name of our Wireless Network.
+
+Wireless Security - It is a section in configuration where we can manually set Security mode.
+
+
+WIRELESS SECURITY PROTOCOLS
+
+WEP (Wired Equivalant Privacy)
+This provides security for both wired and wireless devices.
+This uses 40 bit encryption key which is easily hackable.
+
+WPA (Wifi Protected Access)
+It gives more security when compared to WEP.
+It uses stronger encryption method called TKIP(Temporal Key Integrity Protocol) in which the key changes dynamically.
+It uses EAP (Extensible Authentication Protocol) which will verify authorized network users.
+
+WPA 2 
+It gives more security than WPA.
+It uses CCMP which is an enhanced data cryptographic encapsulation.
+It is now available on all Wifi hardwares.
+
+WPS (Wifi Protected Setup) - It is one of the easiest way to join a wireless network.
+
+MAC FILTER
+Every Wireless device have a MAC address.
+With MAC Filter we can allow or block access of the device to our wireless network.
+
+DMZ (Demilitarized Zone)
+
+This allows a computer to use our internet but outside the firewall.
+It is used for testing purposes.
+Main thing is that the computer must have assigned Static ip address and not from DHCP server.
+
+GUEST NETWORK
+
+It is a separate wireless network that is built in a wireless router.
+It provides internet to our guest , but the SSID will slightly change where a hyphen will come before the SSID in Guest Network.
+Example :
+SSID : "Wayne1234"
+Guest SSID : "-Wayne1234"
+
+ 
+NETWORK UTILITIES
+
+Ping 
+
+This command is used to find the connectivity between client and Host. For Example :
+If we ping a host in cmd by sending 4 data packets , the host will respond and resend the data packets which means there is a genral network connectivity between client and host.
+If it replies "Request timed out" , then the host is down or else it is blocking all ping requests.
+
+Pathping
+
+It combines the functionality of the ping and tracert.
+This command will give more details such as path details and time taken.
+
+ARP PING
+
+If we didn't get any response using ping command , then we can use arp ping.
+ARP Ping command uses ARP data packets to ping host or site.
+Because Firewalls will not block any ARP data.
+And it cannot be used on internet beacuse it only works on LAN.
+
+Traceroute
+When we ping a host , if its not work.
+Then we can use tracert to find the location of where problem occurs.
+
+Nbtstat - This command is used to resolve Netbios names to ip addresses.
+
+Netstat - It is used to view current networks which are connected to our computer.

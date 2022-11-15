@@ -1,0 +1,56 @@
+1) Inside LAN - Bridged Adaptar
+2) Outside LAN - NAT
+
+Nmap
+
+nmap -sT 192.168.29.127 (single host)
+nmap -sT 192.168.29.0/24 (whole network)
+-sT - tcp scan
+
+nmap -sS -A -O -v -p- 192.168.1.2
+-sS - stealth scan
+-A - Aggressive scan (OS+Service+tracert)
+-O - OS detection
+-v - verbose (detailed output)
+-p - will scan all 65535 ports
+
+
+Traffic Analyzer - Wireshark , used to capture traffic(data packets) .
+
+Splunk - It is used to access data from multiple servers or computers . We install splunk in a computer , and from that computer , we can access data from all other servers or computers . For this process the other server or computer must have Forwarder installed on their systems. For Example : A MNC company have lots of servers , such as they have seperate server for each branch . And they have their main server . If they want to access data of other servers from their main server , they can use splunk. 
+
+
+IDS - It can only detect the event.
+IPS - It can detect as well as can prevent the event from happening.
+
+HONEY POT - It is a software or hardware which is used to track or block attackers IP . We have to install honeypot software and then we have to configure honeypot .Then if anyone ping our ip then , we'll get their details.
+
+How HoneyPot works ?
+After configuring honeypot in our server or computer , it will show that port 80 is open , but actually its not open . We are just showing the attackers thatport 80 is open . And when they try to attack us , we'll get their ip and other details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

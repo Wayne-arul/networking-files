@@ -1,0 +1,188 @@
+Packet tracer
+It is a network simulator software . 
+
+Switch is a device used to connect multiple devices such as laptops and computers.
+
+You cannot assign Network ID or Broadcast ID to any computer.
+Network ID - 192.168.1.0 
+Router IP - 192.168.1.1
+Broadcast ID - 192.168.1.255
+
+In subnetting we can split network.
+For exmaple : A company has Sales , HR , Development departments. They all are connected in the same Network which all of them can communicate with each other. But we want them not to communicate with other departments . If we use multiple routers , then it will cost a lot . So there is a solution which we call it as subnetting .We can split the network into 2 or 3 or more .
+
+255.255.255.224 - CSM (Custom Subnet Mask)
+255.255.255.128 - Subnet Mask will be common for both networks
+
+Public IP is assigned by our ISP during the configuration of our router and it cannot be changed.
+
+Every Router will have a public ip . While data packets sent from our Network to Internet , at the router our private ip will be changed to public ip when data packets sent outside.
+
+
+Public IP is unique , whereas Private IP may be same as ours for someone else only if the host is from different network.
+
+Router will find which is the shortest path as well as less traffic path and send the data packets.
+
+Router Ports :
+
+Interface Port - It is used to connect a router with another device such as switch , router , computer . 
+-Types
+1)Ethernet Interface - old and slow
+2)Fast Ethernet Interface - new and fast
+3)Giga Bit Ethernet Interface - new and advanced 
+4)Serial Interface - is used to connect a router with another router 
+
+When we connect router with switch , we go with Fast Ethernet.
+When we connect router with another router , we go with Serial Interface.
+
+
+Line Port - It is used to configure a router.
+-Types 
+1)Console Port - It is used for direct configuration , where we directly connect router to our computer and configure.
+
+2)Auxillary Port - It is used for remote configuration , which means the router is far away from you , and you can configure it remotely using auxilary port.
+
+NID - Network ID
+conf t - Configure Terminal
+
+Router Modes - CLI
+
+ROUTER > Enable  - UserMode/LoginMode (Type enable to get into privilage mode)
+ROUTER#  - Privilage mode (we can't do changes but we can see information)
+ROUTER# - conf t  (this cmd will take you to the configuration mode)
+ROUTER(CONFIG)#  - this mode is called Global Configuration Mode .
+
+Assign IP to a Router :
+interface FastEthernet 0/0
+192.168.1.1 255.255.255.0
+
+Assign/Change password to a Router :
+line console 0
+password cisco
+login
+
+Assign/Change password to Telnet/Terminal :
+line vty 0 4
+password cisco
+login
+
+
+ROUTING 
+-types
+1)Static Routing - It is the process of filling unknown network in ip table.
+Used in smaller Network.
+
+2)Dynamic Routing - It is the process of filling known network in ip table.
+Used in larger Network.
+
+IP Table
+*Every Router will have a memory , where they store ip addresses in IP Table.
+IP table have ip addresses , known NID , unknown NID.
+*Known network ID means which are directly connected to router . directly connected means the inferface directly start from the router .
+*Unknown network ID means which are not directly connected to a router . not directly means the connection will come from another router to one router .  
+
+
+"We do Routing , so that routers could communicate"
+
+Dynamic Routing
+1)Distance Vector Protocol (RIP)- old. It considers HOP count , as minimum HOP count is the best path.
+
+2)Link State Protocol (OSPF)- It considers Bandwidth , means it will check which route have maximum badwidth and travel in that route.
+
+3)Advanced Distance Vector Protocol (EIGRP)- most commonly used. It will consider Bandwidth + Delay (time taken) .
+EIGRP - Enhanced Interior Gateway Protocol
+
+
+SWITCHING
+
+Switch Ports - Based on functionality , there are 2 ports.
+1)Access Port - used to connect switch with another device.
+2)Trunk Port -  used to connect switch with another switch.
+
+
+Disadvantages of Subnetting 
+-Time consuming
+-Increases the workload of network / system admin
+
+VLAN
+Configuration done in switch.
+
+VLAN Configuration Steps
+1) Create VLAN Number
+2) Create VLAN Name
+3) Choose an interface of Switch
+4) Configure the interface (Access/Trunk)
+5) Link the interface with VLAN (VLAN Membership)
+
+
+ACL - configuration done in router.
+It will control incoming and outgoing traffic , by permit or deny the traffic.
+It is of two types .
+
+1) Standard ACL - It is old and not in use. This can be configured for smaller network . Number ranges from 0-99. Configured close to destination. It will permit or deny traffic based on source ip.
+
+2) Extended ACL - It is new and currently in use. This can be configured for larger network. Number ranges from 100-199. Configured close to source. It will permit traffic based on source ip , destination ip , port no and protocol.
+
+
+NAT - Network Adrress Translation
+Every companies will have a main server and sub servers . They don't want us to see their main server ip or other details . So there NAT will come into action . What NAT will do is , that it will change the ip when it go outside. For example : When we ping google server , we'll get reply from google but the ip shown is not their actual main server ip . NAT will change the ip and send it to us. 
+
+
+FIREWALL
+-Types 
+1) Stateful Firewall
+2) Stateless FIrewall
+
+CISCO ASA FIREWALL 5505
+-Key Points
+1)We can't assign ip directly to any interface of firewall.
+2)We have to assign ip to vlan and then we have link the vlan to any interface , so that the ip get indirectly assigned to the interface. 
+3)In side the LAN , the network will be called as inside LAN .
+4) Outside the network , will be called as Outside LAN. 
+5)VLAN 1 - INSIDE - SEC LVL 100 - ETHERNET 0/1
+6)VLAN2 - OUTSIDE - SEC LVL 0 - ETHERNET 0/0
+
+*Traffic goes from inside our firewall to outside will be easy , because the Security Lvl is 100 .
+
+*If Traffic comes from outide the firewall to inside , then it will be tough , which means lots of inspections will happen because the security lvl is 0.
+
+
+Extended Named ACL - Instead of numbers we have to give Alphabets.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

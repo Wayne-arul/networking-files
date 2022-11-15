@@ -1,0 +1,35 @@
+STAR TOPOLOGY (Single Point Failure)
+
+All machines are connected to a SWITCH or a HUB with separate wires.
+(So that even if one machine fails or a break in wire, that will not affect the other machines because every machines are connected individualy to a Switch or Hub )
+And all data will be transfered to a Central point ie. Switch.
+After receiving the data it will then send it to the other machines)
+the disadvantage is that if the Central Hub(Switch) fails , then all the machines connected to the Cental Hub will get affected)
+
+BUS TOPOLOGY
+
+All machines are connected by a single wire .Advantage of Bus topology is that its cheap and easy to implement.
+both the ends are terminated with a Terminator(T).
+If one Terminator fails then the Data will send back .
+This is called as Data Reflection.
+
+RING TOPOLOGY 
+
+All machine are connected as a Ring position , looks like a shape of Ring or closed loop.Data packets are sent around the ring untill , it reaches it final destintaion.This Topology is rarely used.Advantages are easy to install and easy to troubleshoot.
+And disadvanages are if one of the machine down or a wire got break , then the whole machines will be disrupted.
+
+MESH TOPOLOGY
+
+
+
+
+
+
+
+
+
+
+
+
+
+

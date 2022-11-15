@@ -1,0 +1,4 @@
+Router(config)#access-list 110 DENY TCP 192.168.1.10 0.0.0.0 10.0.0.2 0.0.0.0 EQ 80
+Router(config)#access-list 110 permit icmp any any
+Router(config)#interface fastEthernet 0/1
+Router(config-if)#ip access-group 110 in

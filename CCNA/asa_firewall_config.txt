@@ -1,0 +1,85 @@
+ASA FIREWALL
+
+Step 1 :
+ciscoasa(config)#interface vlan 1
+ciscoasa(config-if)#no ip address
+WARNING: DHCPD bindings cleared on interface 'inside', address pool removed
+ciscoasa(config-if)#exit
+ciscoasa(config)#no dhcpd address 192.168.1.5-192.168.1.35 inside
+
+Interface inside ip address or netmask not valid (0.0.0.0/255.255.255.255)
+
+
+Step 2 :
+
+ciscoasa(config)#interface vlan 1 
+ciscoasa(config-if)#ip address 172.16.1.1 255.255.255.0
+ciscoasa(config-if)#no shutdown
+ciscoasa(config-if)#nameif inside
+ciscoasa(config-if)#security-level 100
+ciscoasa(config-if)#exit
+
+ciscoasa(config)#interface vlan 2 
+ciscoasa(config-if)#ip address 210.2.2.2 255.255.255.0
+ciscoasa(config-if)#no shutdown
+ciscoasa(config-if)#nameif outside
+ciscoasa(config-if)#security-level 0
+ciscoasa(config-if)#exit
+
+
+Step 3 : (Linking interface with VLAN)
+
+ciscoasa(config)#interface ethernet 0/1
+ciscoasa(config-if)#switchport access vlan 1
+ciscoasa(config-if)#exit
+ciscoasa(config)#interface ethernet 0/0
+ciscoasa(config-if)#switchport access vlan 2
+ciscoasa(config-if)#exit
+
+
+Step 4 :
+
+ciscoasa(config)#dhcpd address 172.16.1.5-172.16.1.10 inside
+ciscoasa(config)#dhcpd dns 20.20.20.2 interface inside
+ciscoasa(config)#route outside 0.0.0.0 0.0.0.0 210.2.2.1 
+ciscoasa(config)#object network LAN
+ciscoasa(config-network-object)#subnet 172.16.1.0 255.255.255.0
+ciscoasa(config-network-object)#nat (inside,outside) dynamic interface
+ciscoasa(config-network-object)#exit
+
+
+Step 5 :
+
+ciscoasa(config)#access-list inside_to_internet extended permit tcp any any
+ciscoasa(config)#access-list inside_to_internet extended permit icmp any any
+ciscoasa(config)#access-group inside_to_internet in interface outside
+
+
+ROUTER
+
+Router(config)#router ospf 1
+Router(config-router)#network 210.2.2.0 0.0.0.255 area 0
+Router(config-router)#network 20.20.20.0 0.0.0.255 area 0
+
+Change PC ip settings to DHCP.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

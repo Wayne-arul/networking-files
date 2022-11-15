@@ -1,0 +1,27 @@
+Switch(config)#vlan 10
+Switch(config-vlan)#name sales
+Switch(config-vlan)#exit
+
+Switch(config)#interface fastEthernet 0/2
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#exit
+
+Switch(config)#interface fastEthernet 0/3
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#exit
+
+Switch(config)#vlan 30 
+Switch(config-vlan)#name hr
+Switch(config-vlan)#exit
+
+Switch(config)#interface fastEthernet 0/4
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 30
+Switch(config-if)#exit
+
+Switch(config)#interface fastEthernet 0/5
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 30
+Switch(config-if)#exit
